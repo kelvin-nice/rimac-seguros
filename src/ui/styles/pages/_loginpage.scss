@@ -1,0 +1,473 @@
+.blue-d{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    user-select: none;
+}
+.fuccia-d{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    z-index: 2;
+    user-select: none;
+}
+.blue-s{
+    display: none;
+}
+.fuccia-s{
+    display: none;
+}
+
+.login{
+    position: relative;
+    padding:  2rem 0 0;
+    //min-height: calc(100vh - 153px);
+    min-height: calc(100vh - 106px);
+    padding: 7rem 0 6rem;
+    overflow: hidden;
+    margin-bottom: 0;
+    //margin-top: 2rem;
+
+    .container{
+        display: flex;
+        align-items: center;
+        
+        max-width: 1120px;
+        padding: 0 24px;
+        height: 100%;
+        width: 100%;
+        z-index: 90;
+    }
+}
+
+
+.login-left{
+    max-width: 480px;
+    display: flex;
+    img{
+        margin: auto 0;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.login-right{
+    max-width: 352px;
+    display: inline-block;
+    margin: 32px 0px 24px 128px;
+
+    .text-login{
+        width: 352px;
+        .block{
+            .hide-img{
+                display: none;
+            }
+        }
+        .line{
+            display: none;
+        }
+    }
+   
+
+    .seguro{
+        @include text-x(var(--font-sonoma), 700);
+        padding: 4px 8px;
+        display: inline-block;
+        border-radius: 4px;
+        background: linear-gradient(90deg, #00F4E2, #00FF7F);
+        margin-bottom: 16px;
+
+    }
+    h1{
+        margin-bottom: 8px;
+    }
+
+    p{
+        @include text-x(var(--font-sonoma), 600);
+        margin-bottom: 24px;
+    }
+
+    .documentoSelect{
+        position: relative;
+        flex-wrap: wrap;
+        width: 100%;
+        display: flex;
+        margin-bottom: 16px;
+        .select-document{
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%; //cambio recién
+
+            .select-documentoTipo{
+                width: fit-content;
+                display: flex;
+            
+                #documentoTipo{
+                    appearance: none;
+                    font-size: 16px;
+                    padding: 16px 40px 16px 16px;
+                    height: 56px;
+                    min-width: 140px;
+                    border-radius: 8px 0 0 8px;
+                    cursor: pointer;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                }
+                .arrow-down{
+                    position: absolute;
+                    left:105px;
+                    top: 17px;
+                    pointer-events: none;
+                    cursor: pointer;
+                }
+            }
+            .n-document{
+                width: 100%;
+                height: 56px;
+            
+                .inputDocument{
+                    position: relative;
+                    width: 212px;
+                    height: 56px;
+                    padding: 24px 16px 4px 16px;
+                    border-radius: 0px 8px 8px 0px ;
+                    border: 1px solid var(--gray);
+                    cursor: text;
+                    font-size: 16px;
+                    font-family: var(--font-sonoma);
+                    font-weight: 500;
+                    
+                    &.error{
+                        border-color: red;
+                    }
+                }
+            }
+
+            
+
+        } 
+        .error-field-uno{
+            margin: 8px 0px 16px;
+            flex-basis: 100%; /* Ocupa todo el ancho */
+            //ERRORES
+            .error{
+                font-family: var(--font-sonoma);
+                font-size: 12px;
+                font-weight: 500;
+                color: red;
+                display: inline-block;
+                margin: 0px;
+            }
+
+        }
+        .input-cel{
+            display: block;
+            width: 100%; 
+            flex-basis: 100%;
+            position: relative;
+            .celular{
+                width: 100%;
+                padding: 24px 16px 4px 16px;
+                border-radius: 8px;
+                font-size: 16px;
+                border: 1px solid var(--gray);
+                font-family: var(--font-sonoma);
+                font-weight: 500;
+                height: 56px;
+                cursor: text;
+                &.error{
+                    border-color: red;
+                    
+                }
+            }
+            
+            
+        }
+        .error-field-dos{
+            margin: 8px 0px 16px;
+            flex-basis: 100%; /* Ocupa todo el ancho */
+            //ERRORES
+            .error{
+                font-family: var(--font-sonoma);
+                font-size: 12px;
+                font-weight: 500;
+                color: red;
+                display: inline-block;
+                margin: 0px;
+            }
+        }
+        .text-acepto{
+            font-family: var(--font-sonoma);
+            font-size: 12px;
+        }
+        a{
+            text-decoration: underline;
+            font-family: var(--font-sonoma);
+            font-size: 12px;
+            font-weight: 800;
+            margin-top: 14px;
+            cursor: pointer;
+            color: var(--dark);
+        }
+        .label_check-politica{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 12px;
+            width: 100%;
+            //ERRORE CHECKED
+            &.errorCheck{
+                .check-label-box{
+                    border: 1px solid red;
+                }
+                .text-acepto{
+                    color: red;
+                }
+            }
+
+            input{
+                display: none;
+            }
+            .check-label-box{
+                width: 20px;
+                height: 20px;
+                border: 1px solid var(--dark); // Color del borde estándar
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 8px;
+                transition: all 0.3s ease;
+                &.checked{
+                    background: var(--dark); // Fondo cuando está marcado
+                    border-color: transparent; // Quita el borde cuando está marcado
+                    img{
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+            }
+        }
+        .label_check-politicaComunicaciones{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 12px;
+            width: 100%;
+            //ERRORES CHECKED
+            &.errorCheck{
+                .check-label-boxComunicaciones{
+                    border: 1px solid red;
+                }
+                .text-acepto{
+                    color: red;
+                }
+            }
+
+            input{
+                display: none;
+            }
+            .check-label-boxComunicaciones{
+                width: 20px;
+                height: 20px;
+                border: 1px solid var(--dark); // Color del borde estándar
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 8px;
+                transition: all 0.3s ease;
+                &.checked{
+                    background: var(--dark); // Fondo cuando está marcado
+                    border-color: transparent; // Quita el borde cuando está marcado
+                    img{
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+            }
+        }
+        
+    }
+              
+}        
+        
+
+
+
+//N° DE DOCUMENTO
+/* Estilos para el floating label inputLabel "N° de documento"*/
+.floating-label {
+    position: absolute;
+    top: 19px; 
+    left: 157px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: -5px;
+    color: var(--gray);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  /* Cuando el input tiene foco o un valor, mueve el label inputLabel "N° de documento" */
+  input:focus + .floating-label,
+  input:not(:placeholder-shown) + .floating-label,
+  .floating-label.active {
+    top: 8px;               
+    left: 157px;
+    font-size: 12px;          
+    color: var(--gray);
+    font-weight: 500;             
+  }
+
+
+
+ //CELULAR
+/* Estilos texto "Celular"*/
+.floating-label-celular {
+    position: absolute;
+    top: 19px; 
+    left: 17px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: -5px;
+    color: var(--gray);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  /* Cuando el input tiene foco o un valor, mueve el label celular "Celular" */
+input:focus + .floating-label-celular,
+input:not(:placeholder-shown) + .floating-label-celular,
+.floating-label-celular.active {
+    top: 8px;               
+    left: 17px;
+    font-size: 12px;          
+    color: var(--gray);
+    font-weight: 500;             
+}
+
+  /* estilos puros */
+.cotiza-btn{
+    all: unset;
+    margin-top: 24px;
+    padding: 20px 40px;
+    color: white;
+    background-color: var(--dark);
+    font-family: var(--font-sonoma);
+    font-weight: 700;
+    border-radius: 40px;
+    cursor: pointer;
+    &:hover{
+        background-color: #131313;
+    }
+}
+
+
+@media (max-width: 1177.94px) {
+    .login-right {
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 768px){
+    .login{
+        padding-top: 38px;
+        margin-bottom: 0;
+    }
+    .container{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px;
+    }
+    .login-left{
+        display: none;
+    }
+    .login-right{
+        margin-left: 0;
+        max-width: 768px;
+        margin-bottom: 0px;
+        .text-login{
+            width: 100%;
+            .block{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 12px;
+                .block01{
+                    h1{
+                        font-size: 28px;
+                    }
+                }
+                .hide-img{
+                    display: block;
+                    width: 136px;
+                    height: 158px;
+                    img{
+                        width: 136px;
+                    }
+                }
+            }
+            .line{
+                display: block;
+                margin-top: 24px;
+                margin-bottom: 24px;
+            }
+        }
+        
+    }
+    .cotiza-btn{
+        text-align: center;
+        width: 100%;
+    }
+    .login-right .documentoSelect .select-document{
+        width: 100%;
+        display: flex;
+        //flex-wrap: wrap;
+        
+     }
+     .select-documentoTipo{
+        width: fit-content;
+     }
+      .n-document{
+        width: 100%;
+      }
+      .login-right .documentoSelect .select-document .n-document .inputDocument {
+        width: 100%;
+    }
+    
+    .error-field-uno{
+        display: block;
+    }
+    .blue-d{
+        display: none;
+    }
+    .fuccia-d{
+        display: none;
+    }
+    .blue-s{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        user-select: none;
+    }
+    .fuccia-s{
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        user-select: none;
+    }
+    
+}
+
+
+@media (min-width:768px) {
+    .text-login{
+        width: 100%;
+    }
+    .block01{
+        width: 100%;
+    }
+}

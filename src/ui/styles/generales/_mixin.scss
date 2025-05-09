@@ -1,0 +1,49 @@
+
+
+@mixin text-xs($font-family, $font-weight){
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: 12px;
+    line-height: 1rem;
+    color: var(--dark);
+}
+
+@mixin text-x($font-family, $font-weight){
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--dark);
+}
+
+@mixin text-ms($font-family, $font-weight){
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--dark);
+}
+
+@mixin text-m($font-family, $font-weight){
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--dark);
+}
+
+@mixin especial($font-family, $font-weight){
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: 40px;
+    line-height: 48px;
+    color: var(--dark);
+}
+
+@mixin parrafo-lato($font-family, $font-weight){
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--dark);
+}
