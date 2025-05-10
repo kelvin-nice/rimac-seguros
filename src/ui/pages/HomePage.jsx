@@ -10,6 +10,11 @@ import iconButton from '../assets/button-circle-icon.svg';
 import unoStepper from '../assets/uno_stepper.svg';
 import textButton from '../assets/text_button_web.svg';
 
+import iconHome from '../assets/icon-home.svg';
+import iconClinic from '../assets/icon-clinic.svg';
+import iconChekeo from '../assets/icon-chekeo.svg';
+import planRecomendado from '../assets/plan-recomendado.svg';
+
 
 
 
@@ -48,9 +53,9 @@ const HomePage = () => {
           // Agregar un icono basado en el nombre del plan
           let icon;
           let additionalIcon; 
-          if (plan.name === "Plan en Casa") {icon = "src/ui/assets/icon-home.svg";}
-          if (plan.name === "Plan en Casa y Clínica") {icon = "src/ui/assets/icon-clinic.svg"; additionalIcon = "src/ui/assets/plan-recomendado.svg";} 
-          if (plan.name === "Plan en Casa + Chequeo ") {icon = "src/ui/assets/icon-chekeo.svg";}
+          if (plan.name === "Plan en Casa") {icon = iconHome;}
+          if (plan.name === "Plan en Casa y Clínica") {icon = iconClinic; additionalIcon = planRecomendado;} 
+          if (plan.name === "Plan en Casa + Chequeo ") {icon = iconChekeo;}
 
           return { ...plan, icon, additionalIcon };
         });
@@ -154,7 +159,7 @@ const HomePage = () => {
       </section>
 
       {/* Planes filtrados */}
-      <section className="cards-total" >
+      <div className="cards-total" >
         {
           filteredPlans.map((plan, index) => (
             <CardPlans
@@ -168,7 +173,7 @@ const HomePage = () => {
             />
           ))
         }
-      </section>
+      </div>
     </>
   );
 };
