@@ -8,7 +8,7 @@ const CardPlans = ({name, description, price, icon, additionalIcon, customStyle 
     <article className="card-plans" style={customStyle} >
 
       {additionalIcon && (
-        <img src={additionalIcon} alt="recomendado" className="recomendado" />
+        <img src={additionalIcon || '/src/ui/assets/plan-recomendado.svg/' } alt="recomendado" className="recomendado" />
       )}
       
 

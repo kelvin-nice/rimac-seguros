@@ -112,7 +112,9 @@ section{
 }
 .cards-total{
   max-width: 1120px;
-  
+  justify-content: center !important;
+  display: flex;
+  margin: 0 auto;
 }
 
 
@@ -275,8 +277,8 @@ section{
 
 
  .cards-total{
-  max-width: 1120px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 }
@@ -287,9 +289,11 @@ section{
  .cards-total{
   max-width: 660px;
   padding: 0 50px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
-  overflow: scroll;
+  overflow-x: scroll;
 }
 }
