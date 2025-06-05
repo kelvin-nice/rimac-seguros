@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import imagen from '../assets/imagen-familia.png';
